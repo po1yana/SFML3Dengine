@@ -134,10 +134,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoxScaleAndRotate.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h" />
-    <ClInclude Include="vec.h" />
+    <ClInclude Include="3DsCamera.h" />
+    <ClInclude Include="3dsMath.h" />
+    <ClInclude Include="3DsModule.h" />
+    <ClInclude Include="3DsPrimitive.h" />
+    <ClInclude Include="3DsRasterizer.h" />
+    <ClInclude Include="3DsVertex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
