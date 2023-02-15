@@ -31,25 +31,47 @@ int main()
 
     initPrimitive(
         {
-           vec3(3, 1, 1),
-           vec3(3, 1, -1),
-           vec3(3, -1, -1),
-           vec3(3, -1, 1)
+           vec3(9, -1, 0),
+           vec3(5, -1, -4),
+           vec3(1, -1, 0),
+           vec3(5, -1, 4),
         },
         {
-           vec3(0, 0, 0),
-           vec3(0, 0, 0),
-           vec3(0, 0, 0),
-           vec3(0, 0, 0)
+           vec3(0, 255, 0)
         },
         PLANE
     );
+
+    //initPrimitive(
+    //    {
+    //       vec3(3, 2, 1),
+    //       vec3(3, 2, -1),
+    //       vec3(3, 0, -1),
+    //       vec3(3, 0, 1),
+
+    //       vec3(5, 2, 1),
+    //       vec3(5, 2, -1),
+    //       vec3(5, 0, -1),
+    //       vec3(5, 0, 1)
+    //    },
+    //    {
+    //       vec3(255, 0, 0),
+    //       vec3(0, 255, 0),
+    //       vec3(0, 0, 255),
+    //       vec3(255, 255, 255),
+    //       vec3(0, 255, 255),
+    //       vec3(255, 0, 255)
+    //    },
+    //    CUBE
+    //);
+
 
     windowClear();
     drawAll();
     windowDisplay();
 
     window.setMouseCursorVisible(false);
+
     sf::Clock clock;
     bool keyQuery[4] = { 0,0,0,0 };
     bool delta = false;
@@ -59,6 +81,8 @@ int main()
     while (windowIsOpen())
     {
         sf::Time elapsedTime = clock.getElapsedTime();
+        clock.restart().asSeconds();
+
         sf::Event event;
         while (windowPollEvent(event))
         {
@@ -106,29 +130,29 @@ int main()
                     keyQuery[3] = false;
                 }
             }
-            //if (event.type == sf::Event::MouseMoved)
-            //{
-            //    hAngle += 1000 * elapsedTime.asSeconds() * float(720 / 2 - event.mouseMove.x);
-            //    vAngle += 1000 * elapsedTime.asSeconds() * float(720 / 2 - event.mouseMove.y);
-            //    mainCamera->yaw += hAngle;
-            //    mainCamera->pitch += vAngle;
-            //    delta = true;
-            //}
+            if (event.type == sf::Event::MouseMoved)
+            {
+                hAngle += 0.1 * elapsedTime.asSeconds() * float(720 / 2 - event.mouseMove.x);
+                vAngle += 0.1 * elapsedTime.asSeconds() * float(720 / 2 - event.mouseMove.y);
+                mainCamera->yaw += hAngle;
+                mainCamera->pitch += vAngle;
+                delta = true;
+            }
         }
         if (keyQuery[0]) {
-            mainCamera->position[2] += 70000 * elapsedTime.asSeconds();
+            mainCamera->position = mainCamera->position + mainCamera->direction * (5 * elapsedTime.asSeconds());
             delta = true;
         }
         if (keyQuery[1]) {
-            mainCamera->position[2] -= 70000 * elapsedTime.asSeconds();
+            mainCamera->position = mainCamera->position - mainCamera->direction * (5 * elapsedTime.asSeconds());
             delta = true;
         }
         if (keyQuery[2]) {
-            mainCamera->position[0] -= 70000 * elapsedTime.asSeconds();
+            mainCamera->position = mainCamera->position - mainCamera->right * (5 * elapsedTime.asSeconds());
             delta = true;
         }
         if (keyQuery[3]) {
-            mainCamera->position[0] += 70000 * elapsedTime.asSeconds();
+            mainCamera->position = mainCamera->position + mainCamera->right  * (5 * elapsedTime.asSeconds());
             delta = true;
         }
 
@@ -140,8 +164,7 @@ int main()
             //mainCamera->DEBUGprintPosition();
         }
         
-        //sf::Mouse::setPosition(sf::Vector2i((int)720 / 2, (int)720 / 2), window);
-        clock.restart().asSeconds();
+        sf::Mouse::setPosition(sf::Vector2i((int)720 / 2, (int)720 / 2), window);
         hAngle = vAngle = 0;
         delta = false;
 

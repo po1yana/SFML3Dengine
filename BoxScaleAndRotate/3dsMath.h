@@ -50,6 +50,26 @@ struct vec3
     }
 };
 
+vec3 operator+(const vec3& v1, const vec3& v2)
+{
+    return vec3(v1[0] + v2[0], v1[1] + v2[1], v1[2] + v2[2]);
+}
+
+vec3 operator-(const vec3& v1, const vec3& v2)
+{
+    return vec3(v1[0] - v2[0], v1[1] - v2[1], v1[2] - v2[2]);
+}
+
+vec3 operator*(const vec3& v, const float &i)
+{
+    return vec3(v[0] * i, v[1] * i, v[2] * i);
+}
+
+vec3 operator*(const float& i, const vec3& v)
+{
+    return vec3(v[0] * i, v[1] * i, v[2] * i);
+}
+
 void swapVec3(vec3& a, vec3& b) {
     vec3 c = a; a = b; b = c;
 }

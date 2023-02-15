@@ -14,12 +14,10 @@ class Camera
 public:
 	sf::Vector2f win;
 	vec3 position;
-	vec3 forward, right, up;
+	vec3 direction, right, up;
 	float nPlane, fPlane, fovX, fovY;
     float pitch, yaw, roll; 
 	float aspectRatio = (float)win.x / (float)win.y;
-
-    vec3 direction;
 
 	mat4 viewMatrix;
     mat4 viewMatrixBA;
@@ -122,7 +120,7 @@ public:
         else delta = nPlane / local[2] * scale;
         vec3 projection(local[0] * delta, local[1] * delta, local[2]);
         vec3 screen(projection[0] + (win.x / 2), projection[1] + (-win.y / 2), projection[2]);
-        vec3 screenCoords(screen[0], -screen[1], screen[2]);
+        vec3 screenCoords(roundf(screen[0]), roundf(-screen[1]), screen[2]);
 
         //screenCoords.debugPrint();
         return screenCoords;
@@ -131,7 +129,7 @@ public:
     void init() {
         setFrustum(fovY, aspectRatio, nPlane, fPlane);
         roll = pitch = yaw = 0;
-        yaw = DEGTORAD(1.2343);
+        yaw = DEGTORAD(0);
         fovX = 2 * atan(tan(fovY * 0.5) * aspectRatio);
         setModelView(pitch, yaw, roll);
 

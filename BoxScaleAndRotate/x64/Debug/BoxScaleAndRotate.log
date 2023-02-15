@@ -3,33 +3,8 @@ C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(10,13)
 C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(10,29): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(14,24): warning C4244: return: преобразование "double" в "float", возможна потеря данных
 C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(18,23): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(58,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsCamera.h(134,1): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsCamera.h(135,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(64,61): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(64,58): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(64,158): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(64,121): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(64,84): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(106,61): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(106,58): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
-          with
-          [
-              T=float
-          ]
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(106,158): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(106,121): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
-C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsRasterizer.h(106,84): warning C4244: аргумент: преобразование "float" в "sf::Uint8", возможна потеря данных
+C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3dsMath.h(78,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\3DsCamera.h(133,18): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\Source.cpp(135,57): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\admin\source\repos\BoxScaleAndRotate\BoxScaleAndRotate\Source.cpp(136,57): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
   BoxScaleAndRotate.vcxproj -> C:\Users\admin\source\repos\BoxScaleAndRotate\x64\Debug\BoxScaleAndRotate.exe
